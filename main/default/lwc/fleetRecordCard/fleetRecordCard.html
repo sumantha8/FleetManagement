@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-grid slds-wrap slds-col slds-size_3-of-3 slds-p-horizontal_x-medium slds-p-vertical_x-medium">
+        <div>
+            <div class="slds-grid slds-wrap slds-col slds-size_2-of-3 slds-p-horizontal_x-medium slds-p-vertical_x-medium">
+                <lightning-card icon-name="standard:Fleet__c" if:true={fleetRec} onclick={handleFleetClick} >
+                    <div class="c-container">
+                        <div class="slds-grid slds-wrap">
+                            <img src={imgSrc} style="height: 200px;width:300px"/>
+                        </div>
+                        <div slot="title" class="slds-align_absolute-center slds-border_bottom slds-text-heading_medium">
+                            {fleetRec.Bus_ID__c}
+                        </div>
+                    </div>    
+                </lightning-card>
+            </div>
+        </div>
+    </div>
+</template>

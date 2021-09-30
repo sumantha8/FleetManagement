@@ -1,0 +1,26 @@
+<template >
+    <lightning-card>
+        <lightning-layout if:true={recordId}>
+            <lightning-layout-item size="6">
+                <div class="slds-p-left_medium">
+                    <!--To show record edit form-->
+                    <lightning-record-view-form object-api-name="Fleet__c" record-id={recordId}>
+                        <lightning-output-field field-name="Bus_ID__c"></lightning-output-field>
+                        <lightning-output-field field-name="Resale_Value__c"></lightning-output-field>
+                    </lightning-record-view-form>
+                </div> 
+            </lightning-layout-item>
+            <lightning-layout-item size="8">
+                <div class="slds-p-left_large">
+                    <!-- To view record-->
+                    <lightning-record-form
+                        record-id={recordId}
+                        object-api-name="Fleet__c"
+                        fields={selectedFields}
+                        mode="view"
+                    ></lightning-record-form>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

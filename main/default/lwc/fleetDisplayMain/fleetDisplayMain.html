@@ -1,0 +1,32 @@
+<template>
+    <lightning-spinner class="slds-is-fixed slds-is-absolute" alternative-text="Loading" size="medium" variant="brand" if:true={showSpinner}></lightning-spinner>
+    <lightning-layout>
+        <lightning-layout-item size="8">
+            <div class="slds-p-left_medium">
+                <lightning-card title='Fleet Information'>
+                    <div class="c-container">
+                        <div class="slds-grid slds-wrap">
+                            <template if:true={fleetRecords}>
+                                <template for:each={fleetRecords} for:item="fleet">
+                                    <div class="slds-size_1-of-4" key={fleet.Id}>
+                                        <c-fleet-record-card data-id={fleet.Id} fleet-rec={fleet} onfleetclick={handlefleetClick}></c-fleet-record-card>
+                                    </div>
+                                </template> 
+                            </template>
+                       </div>
+                    </div></lightning-card>
+            </div> 
+        </lightning-layout-item>
+        <lightning-layout-item size="4">
+            <div class="slds-p-left_large">
+                <lightning-card title='Fleet Detail'>
+                    <div class="c-container">
+                        <div class="slds-grid slds-wrap">
+                                <c-fleet-rec-detail record-id={recordId}></c-fleet-rec-detail>
+                       </div>
+                    </div>
+                </lightning-card>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

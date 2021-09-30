@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bus</fullName>
+    <active>true</active>
+    <label>Bus</label>
+    <picklistValues>
+        <picklist>Current_status__c</picklist>
+        <values>
+            <fullName>Ready For Use</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Scheduled for Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undergoing Repairs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Maximum_Capacity__c</picklist>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
